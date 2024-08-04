@@ -39,11 +39,11 @@ except prawcore.exceptions.OAuthException as e:
     st.stop()
 
 # Set up language model
-OPENAI_API_KEY = "sk-proj-xxqEp5fryc0eC7FQvQAVT3BlbkFJUJMgnCf49TyI0DrC48CI"
+OPENAI_KEY = "sk-proj-xxqEp5fryc0eC7FQvQAVT3BlbkFJUJMgnCf49TyI0DrC48CI"
 MODEL = "gpt-3.5-turbo"  # Changed to a more commonly available model
 
-model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=MODEL)
-embeddings = OpenAIEmbeddings()
+model = ChatOpenAI(openai_api_key=OPENAI_KEY, model=MODEL)
+embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_KEY)
 
 # Set up prompt template
 template = """
