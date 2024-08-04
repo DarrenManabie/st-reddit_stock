@@ -128,17 +128,16 @@ def main():
                 results = analyze_posts(subPopular, subToday)
 
             if results:
-                st.subheader("Analysis Results")
-                st.write("**Most Significant News:**")
+                st.subheader("Most Significant News:")
                 st.write(results[0])
 
-                st.write("**Executive Summary:**")
+                st.subheader("Executive Summary:")
                 st.write(results[1])
 
-                st.write("**Organized News by Company/Topic:**")
+                st.subheader("Organized News by Company/Topic:")
                 st.write(results[2])
 
-                st.write("**Overall Sentiment:**")
+                st.subheader("Overall Sentiment:")
                 st.write(results[3])
             else:
                 st.error("An error occurred during analysis. Please check the console for more information.")
