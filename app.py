@@ -12,9 +12,6 @@ from langchain.docstore.document import Document
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from operator import itemgetter
 
-# Get today's date
-today = datetime.today().strftime('%-d %B %Y')
-
 # Load environment variables from .env file if it exists
 if os.path.exists(".env"):
     load_dotenv()
@@ -121,6 +118,9 @@ def analyze_posts(subPopular, subToday):
 
 def main():
     st.title(f"Reddit r/stocks summarizer")
+
+    today = datetime.today().strftime('%-d %B %Y')
+    st.subheader(f"Today = {today}")
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
