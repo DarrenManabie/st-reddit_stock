@@ -11,6 +11,7 @@ from langchain.prompts import PromptTemplate
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from operator import itemgetter
+from datetime import datetime
 
 # Load environment variables from .env file if it exists
 if os.path.exists(".env"):
