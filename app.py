@@ -43,7 +43,7 @@ OPENAI_API_KEY = "sk-proj-xxqEp5fryc0eC7FQvQAVT3BlbkFJUJMgnCf49TyI0DrC48CI"
 MODEL = "gpt-3.5-turbo"  # Changed to a more commonly available model
 
 model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=MODEL)
-embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+embeddings = OpenAIEmbeddings()
 
 # Set up prompt template
 template = """
