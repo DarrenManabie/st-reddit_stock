@@ -14,7 +14,7 @@ from operator import itemgetter
 from datetime import datetime
 
 # Get today's date
-today = datetime.today().strftime('%Y-%m-%d')
+today = datetime.today().strftime('%-d %B %Y')
 
 # Load environment variables from .env file if it exists
 if os.path.exists(".env"):
@@ -121,7 +121,7 @@ def analyze_posts(subPopular, subToday):
     return results
 
 def main():
-    st.title(f"Reddit Stocks Analysis {today}")
+    st.title(f"Reddit r/stocks summarizer {today}")
 
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
