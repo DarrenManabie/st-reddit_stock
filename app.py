@@ -11,7 +11,6 @@ from langchain.prompts import PromptTemplate
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from operator import itemgetter
-from datetime import datetime
 
 # Get today's date
 today = datetime.today().strftime('%-d %B %Y')
@@ -122,7 +121,7 @@ def analyze_posts(subPopular, subToday):
 
 def main():
     st.title(f"Reddit r/stocks summarizer")
-    st.subheader(f"{today}")
+    st.subheader(f"Date = {today}")
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
             subPopular, subToday = get_reddit_posts()
