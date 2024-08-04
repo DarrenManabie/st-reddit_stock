@@ -1,0 +1,8 @@
+streamlit
+praw
+python-dotenv
+langchain
+langchain-community
+langchain-openai
+docarray
+openai
