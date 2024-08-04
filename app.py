@@ -120,8 +120,9 @@ def analyze_posts(subPopular, subToday):
 def main():
     from datetime import datetime
     today = datetime.today().strftime('%-d %B %Y')
-    st.title("Reddit r/stocks summarizer")
+    st.title("Reddit r/Stocks Summarizer")
     st.subheader(f"Date: {today}")
+    st.write("Have all the popular posts from r/Stocks subreddit compiled and summarized by GPT")
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
