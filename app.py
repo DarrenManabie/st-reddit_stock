@@ -40,7 +40,7 @@ except prawcore.exceptions.OAuthException as e:
 
 # Set up language model
 OPENAI_KEY = st.secrets["OPENAI_API_KEY"]
-MODEL = "gpt-3.5-turbo"  # Changed to a more commonly available model
+MODEL = "gpt-4o-mini"  # Changed to a more commonly available model
 
 model = ChatOpenAI(openai_api_key=OPENAI_KEY, model=MODEL)
 embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_KEY)
