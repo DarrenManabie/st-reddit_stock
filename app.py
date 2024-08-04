@@ -23,9 +23,9 @@ def get_env_variable(var_name):
 # Set up Reddit API client
 try:
     reddit = praw.Reddit(
-        client_id=get_env_variable("REDDIT_CLIENT_ID"),
-        client_secret=get_env_variable("REDDIT_CLIENT_SECRET"),
-        user_agent=get_env_variable("REDDIT_USER_AGENT")
+        client_id=st.secrets["REDDIT_CLIENT_ID"],
+        client_secret=st.secrets["REDDIT_CLIENT_SECRET"],
+        user_agent=st.secrets["REDDIT_USER_AGENT"]
     )
     # Verify the credentials by making a simple API call
     reddit.user.me()
@@ -39,7 +39,7 @@ except prawcore.exceptions.OAuthException as e:
     st.stop()
 
 # Set up language model
-OPENAI_API_KEY = get_env_variable("OPENAI_API_KEY")
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 MODEL = "gpt-3.5-turbo"  # Changed to a more commonly available model
 
 model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=MODEL)
