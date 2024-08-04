@@ -138,10 +138,10 @@ def main():
                 st.subheader("Executive Summary:")
                 st.write(results[1])
 
-                st.subheader("Organized News by Company/Topic:")
+                st.subheader("Organized by Company/Topic:")
                 st.write(results[2])
 
-                st.subheader("Overall Sentiment:")
+                st.subheader("Overall Market Sentiment:")
                 st.write(results[3])
             else:
                 st.error("An error occurred during analysis. Please check the console for more information.")
