@@ -122,7 +122,10 @@ def main():
     today = datetime.today().strftime('%-d %B %Y')
     st.title("Reddit r/Stocks Summarizer")
     st.subheader(f"Date: {today}")
-    st.write("Hi there 👋 I made this app for retail investors to have a distilled version of all the popular posts from the r/Stocks subreddit. Use this app daily to get a quick overview of the stock market.")
+    #st.write("Hi there 👋 I made this app for retail investors to have a distilled version of all the popular posts from the r/Stocks subreddit. Use this app daily to get a quick overview of the stock market.")
+    
+    st.write('''
+    :gray[Hi there 👋 I made this app for retail investors to have a distilled version of all the popular posts from the r/Stocks subreddit. Use this app daily to get a quick overview of the stock market.]''')
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
