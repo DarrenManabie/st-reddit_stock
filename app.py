@@ -11,6 +11,10 @@ from langchain.prompts import PromptTemplate
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from operator import itemgetter
+from datetime import datetime
+
+# Get today's date
+today = datetime.today().strftime('%Y-%m-%d')
 
 # Load environment variables from .env file if it exists
 if os.path.exists(".env"):
@@ -117,7 +121,7 @@ def analyze_posts(subPopular, subToday):
     return results
 
 def main():
-    st.title("Reddit Stocks Analysis")
+    st.title("Reddit Stocks Analysis {today}")
 
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
