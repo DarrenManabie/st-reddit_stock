@@ -125,7 +125,7 @@ def main():
     #st.write("Hi there 👋 I made this app for retail investors to have a distilled version of all the popular posts from the r/Stocks subreddit. Use this app daily to get a quick overview of the stock market.")
     
     st.write('''
-    :gray[Hi there 👋 I made this app for retail investors to have a distilled version of all the popular posts from the r/Stocks subreddit. Use this app daily to get a quick overview of the stock market.]''')
+    :gray[Hi there 👋, this app provides a daily summary of popular r/Stocks posts for retail investors. Get your quick stock market overview by clicking the button below.]''')
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
