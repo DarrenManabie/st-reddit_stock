@@ -121,8 +121,8 @@ def analyze_posts(subPopular, subToday):
     return results
 
 def main():
-    st.title(f"Reddit r/stocks summarizer {today}")
-
+    st.title(f"Reddit r/stocks summarizer")
+    st.subheader(f"{today}")
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
             subPopular, subToday = get_reddit_posts()
