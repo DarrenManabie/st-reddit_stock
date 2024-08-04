@@ -41,7 +41,8 @@ MODEL = "gpt-4o-mini"  # You can change this to other models as needed
 
 if MODEL.startswith("gpt"):
     model = ChatOpenAI(openai_api_key=OPENAI_API_KEY, model=MODEL)
-    embeddings = OpenAIEmbeddings()
+    embeddings = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+
 else:
     model = Ollama(model=MODEL)
     embeddings = OllamaEmbeddings(model=MODEL)
