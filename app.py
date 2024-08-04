@@ -125,7 +125,7 @@ def main():
     url = "https://www.reddit.com/r/stocks/"
     
     st.write('''
-    :gray[Hi there 👋, this app provides a daily summary of popular [r/Stocks](%s) posts for retail investors. Get your quick stock market overview by clicking the button below.]'''% url)
+    :gray[Hi there 👋, get your daily summary of popular [r/Stocks](%s) posts to have an overview of the stock market for the day!]'''% url)
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
