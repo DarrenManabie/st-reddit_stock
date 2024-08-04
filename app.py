@@ -36,7 +36,7 @@ except prawcore.exceptions.OAuthException as e:
     st.stop()
 
 # Set up language model
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = "sk-proj-xxqEp5fryc0eC7FQvQAVT3BlbkFJUJMgnCf49TyI0DrC48CI"
 MODEL = "gpt-4o-mini"  # You can change this to other models as needed
 
 if MODEL.startswith("gpt"):
