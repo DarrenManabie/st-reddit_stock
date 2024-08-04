@@ -128,7 +128,7 @@ def main():
                 results = analyze_posts(subPopular, subToday)
 
             if results:
-                st.subheader("Most Significant New:")
+                st.subheader("Most Significant News:")
                 st.write(results[0])
 
                 st.subheader("Executive Summary:")
