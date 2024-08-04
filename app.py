@@ -129,16 +129,16 @@ def main():
 
             if results:
                 st.subheader("Analysis Results")
-                st.write("Most Significant News:")
+                st.markdown("Most Significant News:")
                 st.write(results[0])
 
-                st.write("Executive Summary:")
+                st.markdown("Executive Summary:")
                 st.write(results[1])
 
-                st.write("Organized News by Company/Topic:")
+                st.markdown("Organized News by Company/Topic:")
                 st.write(results[2])
 
-                st.write("Overall Sentiment:")
+                st.markdown("Overall Sentiment:")
                 st.write(results[3])
             else:
                 st.error("An error occurred during analysis. Please check the console for more information.")
