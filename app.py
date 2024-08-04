@@ -119,9 +119,6 @@ def analyze_posts(subPopular, subToday):
 
 def main():
     st.title(f"Reddit r/stocks summarizer")
-
-    today = datetime.today().strftime('%-d %B %Y')
-    st.subheader(f"Today = {today}")
     
     if st.button("Fetch and Analyze Posts"):
         with st.spinner("Fetching posts from Reddit..."):
