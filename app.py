@@ -164,8 +164,6 @@ def main():
                 
                 escaped_text = results[1].replace('$', '$$')
                 st.write(escaped_text)
-                st.code(repr(results[1]))
-                #st.write(results[1])
 
                 st.subheader("Organized by Company/Topic:")
                 st.write(results[2])
