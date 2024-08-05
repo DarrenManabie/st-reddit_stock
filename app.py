@@ -162,7 +162,7 @@ def main():
 
                 st.subheader("Executive Summary:")
                 
-                escaped_text = results[1].replace('$', 'US$')
+                escaped_text = results[1].replace('$', 'USD')
                 st.write(escaped_text)
 
                 st.subheader("Organized by Company/Topic:")
