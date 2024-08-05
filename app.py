@@ -11,6 +11,7 @@ from langchain.prompts import PromptTemplate
 from langchain.docstore.document import Document
 from langchain_community.vectorstores import DocArrayInMemorySearch
 from operator import itemgetter
+import re
 
 
 # Load environment variables from .env file if it exists
@@ -160,7 +161,18 @@ def main():
                 st.write(results[0])
 
                 st.subheader("Executive Summary:")
-                st.write(results[1])
+                st.write(str(results[1]).strip())
+                # Remove HTML tags
+                clean_text = re.sub('<.*?>', '', str(results[0]))
+
+                # Remove Markdown-like formatting
+                clean_text = re.sub(r'[*_~`#\[\]\(\)\{\}]', '', clean_text)
+
+                # Remove extra whitespace
+                clean_text = ' '.join(clean_text.split())
+
+                st.write(clean_text)
+                #st.write(results[1])
 
                 st.subheader("Organized by Company/Topic:")
                 st.write(results[2])
