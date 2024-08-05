@@ -139,6 +139,7 @@ def main():
         }
         .stButton > button:hover {
             background-color: #45a049;  /* Darker green on hover */
+            color: white;               /* White text */
         }
         </style>
     """, unsafe_allow_html=True)
