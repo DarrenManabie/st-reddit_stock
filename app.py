@@ -70,9 +70,11 @@ def get_reddit_posts():
         for submission in subreddit.new(limit=50):
             if submission.score > 100:
                 subPopular += f"Title: {submission.title}\n"
+                subPopular += f"Title: {submission.url}\n"
 
             if datetime.datetime.fromtimestamp(submission.created_utc).date() == today and submission.score > 20:
                 subToday += f"Title: {submission.title}\n"
+                subToday += f"Title: {submission.url}\n"
     except prawcore.exceptions.ResponseException as e:
         st.error(f"Error fetching posts from Reddit: {str(e)}")
         return None, None
