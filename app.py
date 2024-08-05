@@ -172,6 +172,7 @@ def main():
                 clean_text = ' '.join(clean_text.split())
 
                 st.write(clean_text)
+                st.code(repr(results[1]))
                 #st.write(results[1])
 
                 st.subheader("Organized by Company/Topic:")
