@@ -161,17 +161,18 @@ def main():
                 st.write(results[0])
 
                 st.subheader("Executive Summary:")
-                st.write(str(results[1]).strip())
+                #st.write(str(results[1]).strip())
                 # Remove HTML tags
-                clean_text = re.sub('<.*?>', '', str(results[0]))
+                #clean_text = re.sub('<.*?>', '', str(results[0]))
 
                 # Remove Markdown-like formatting
-                clean_text = re.sub(r'[*_~`#\[\]\(\)\{\}]', '', clean_text)
+                #clean_text = re.sub(r'[*_~`#\[\]\(\)\{\}]', '', clean_text)
 
                 # Remove extra whitespace
-                clean_text = ' '.join(clean_text.split())
+                #clean_text = ' '.join(clean_text.split())
 
-                st.write(clean_text)
+                #st.write(clean_text)
+                st.text(results[1])
                 st.code(repr(results[1]))
                 #st.write(results[1])
 
