@@ -162,7 +162,7 @@ def main():
 
                 st.subheader("Executive Summary:")
                 
-                escaped_text = results[0].replace('$', '$$')
+                escaped_text = results[1].replace('$', '$$')
                 st.write(escaped_text)
                 st.code(repr(results[1]))
                 #st.write(results[1])
