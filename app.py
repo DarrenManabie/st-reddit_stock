@@ -121,6 +121,7 @@ def analyze_posts(subPopular, subToday):
     return results
 
 def main():
+    # hello world
     from datetime import datetime
     today = datetime.today().strftime('%-d %B %Y')
     st.title("Reddit r/Stocks Summarizer")
